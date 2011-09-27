@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Face Detector</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="wrapper">
+	<h1>HTML5 GLASSES</h1>
+	<p>Created by <a href="http://twitter.com/wesbos" target="_blank">Wes Bos</a>. See full details <a href="">here.</a></p>
+	<!-- Our Main Video Element -->
+	<video height="426" width="640" controls="false">
+		<source src="videos/wes4.ogg" />
+		<source src="videos/wes4.mp4" />
+	</video>
+
+	<!-- Out Canvas Element for output -->
+	<canvas id="output"  height="426" width="640" ></canvas>
+
+	<!-- div to track progress -->
+	<div id="elapsed_time">Press play for HTML5 Glasses!</div>
+</div>
+<script type="text/javascript" src="scripts/ccv.js"></script>
+<script type="text/javascript" src="scripts/face.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+</body>
+</html>
