@@ -4,10 +4,15 @@ This demo uses the CCV Javascript Face Detection Library.
 To start run App.start()  in your console.
 
 You can also pass it a few different effects:
-* App.start('glasses'); // Goofy Glasses example
-* App.start('green'); // Green Screen effect (there is a hidden max and min sliders you can use to adjust the thresholds)
-* App.start('hipster'); // simple pixel manipulation example
-* App.start('blur'); // blur example
+
+*App.start('glasses'); // Goofy Glasses example
+
+*App.start('green'); // Green Screen effect (there is a hidden max and min sliders you can use to adjust the thresholds)
+
+*App.start('hipster'); // simple pixel manipulation example
+
+*App.start('blur'); // blur example
+
 
 Requires a browser that supports getUserMedia. This demo will be updated with opera support soon but currently uses chrome canary
 
