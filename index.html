@@ -5,22 +5,33 @@
 </head>
 <body>
 <div class="wrapper">
-	<h1>HTML5 GLASSES</h1>
-	<p>Created by <a href="http://twitter.com/wesbos" target="_blank">Wes Bos</a>. See full details <a href="html5-video-face-detection-canvas-javascript">here.</a></p>
 	<!-- Our Main Video Element -->
-	<video height="426" width="640" controls="false">
-		<source src="videos/wes4.ogg" />
-		<source src="videos/wes4.mp4" />
-	</video>
+	<video height="426" width="640" controls autoplay></video>
 
 	<!-- Out Canvas Element for output -->
-	<canvas id="output"  height="426" width="640" ></canvas>
+	<canvas id="output"  height="426" width="515" ></canvas>
 
-	<!-- div to track progress -->
-	<div id="elapsed_time">Press play for HTML5 Glasses!</div>
+	<div class="colours" style="display:none;">
+		<div id="red">
+			<input type="range" min=0 max=255 value=190 class="min">
+			<input type="range" min=0 max=255 value=240 class="max">
+		</div>
+		<div id="green">
+			<input type="range" min=0 max=255 value=0 class="min">
+			<input type="range" min=0 max=255 value=120 class="max">
+		</div>
+		<div id="blue">
+			<input type="range" min=0 max=255 value=90 class="min">
+			<input type="range" min=0 max=255 value=190 class="max">
+		</div>				
+	</div>
+
 </div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/ccv.js"></script>
 <script type="text/javascript" src="scripts/face.js"></script>
 <script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/stackblur.js"></script>
 </body>
 </html>
