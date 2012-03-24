@@ -14,13 +14,13 @@ You can also pass it a few different effects:
 *App.start('blur'); // blur example
 
 
-Requires a browser that supports getUserMedia. This demo will be updated with opera support soon but currently uses chrome canary
+Requires a browser that supports getUserMedia (Opera Labs camera or Chrome Canary)
 
 Start Google Chrome Canary with open -a Google\ Chrome\ Canary --args --enable-media-stream  OR enable the flag in about:flags
 
 --------------------------------------------------------------------------------
 
-Original links with a stored local video:
+Original links with a stored local video: 
 
 Demo Video: http://www.youtube.com/watch?v=YYES9Qd094o&hd=1
 
