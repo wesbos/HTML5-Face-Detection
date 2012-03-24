@@ -114,10 +114,7 @@ App.init = function() {
 
 
 	// Finally Check if we can run this puppy and go!
-	if (navigator.webkitGetUserMedia) {
-		navigator.webkitGetUserMedia('video', App.successCallback, App.errorCallback);
-	}
-	else if (navigator.getUserMedia) {
+	if (navigator.getUserMedia) {
 		navigator.getUserMedia('video', App.successCallback, App.errorCallback);
 	}
 
@@ -130,3 +127,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	console.log('ready!');
 	App.init();
 }, false);
+
+
+/*! Navigator Getusermedia - v0.1.0 - 3/9/2012
+* https://github.com/rwldrn/navigator.getusermedia
+* Copyright (c) 2012 Rick Waldron <waldron.rick@gmail.com>; Licensed MIT */
+(function(a,b){a.unprefix||(a.URL||(a.URL=a.webkitURL||a.msURL||a.oURL),b.getUserMedia||(b.getUserMedia=b.webkitGetUserMedia||b.mozGetUserMedia||b.msGetUserMedia));var c=!0,d=b.getUserMedia;try{b.getUserMedia({video:!0,audio:!0},function(){})}catch(e){c=!1}b.getUserMedia=function(e,f,g){var h,i,j=Object.keys(e),k={video:1,audio:1};if(!c)i=j.filter(function(a){return this[a]&&k[a]},e).join(",");else{i={};for(h in e)i[h]=e[h]&&k[h]}d.call(b,i,function(b){var c;b.label&&b.readyState===1&&(c=a.URL.createObjectURL(b)),f(b,c)},g||function(){})}})(typeof window=="object"&&window||this,this.navigator||{})
