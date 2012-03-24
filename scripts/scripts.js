@@ -5,7 +5,12 @@ var App = {
 	// Run if we do have camera support
 	successCallback : function(stream) {
         console.log('yeah! camera support!');
-        App.video.src = window.webkitURL ? window.webkitURL.createObjectURL(stream) : stream;
+        if(window.webkitURL) {
+			App.video.src = window.webkitURL ? window.webkitURL.createObjectURL(stream) : stream;
+        }
+        else {
+			App.video.src = stream;
+        }
     },
 
 	// run if we dont have camera support
@@ -112,8 +117,11 @@ App.init = function() {
 	if (navigator.webkitGetUserMedia) {
 		navigator.webkitGetUserMedia('video', App.successCallback, App.errorCallback);
 	}
+	else if (navigator.getUserMedia) {
+		navigator.getUserMedia('video', App.successCallback, App.errorCallback);
+	}
 
-	App.start();
+	// App.start();
 
 };
 
